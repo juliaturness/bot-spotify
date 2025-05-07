@@ -71,9 +71,6 @@ for item in tracks:
     # Aguarda a página de confirmação carregar
     time.sleep(5)  # Aguarda a página de confirmação carregar
 
-    # Aguarda mais tempo para garantir que a transição foi concluída e o link está presente
-    time.sleep(5)
-
     # Tentando encontrar o link "Submit another response" com diferentes abordagens
     try:
         submit_another_button = wait.until(EC.presence_of_element_located((By.XPATH, "//a[contains(@href, 'form_confirm')]")))
